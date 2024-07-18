@@ -1,0 +1,22 @@
+Listening for transport dt_socket at address: 8083
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.7)
+
+2024-07-11T23:53:18.045+05:30  INFO 121379 --- [auth-service] [           main] c.r.auth_service.AuthServiceApplication  : Starting AuthServiceApplication using Java 17.0.11 with PID 121379 (/home/rahul.saha/Rahul/micro-services/auth-service/build/libs/auth-service.jar started by rahul.saha in /home/rahul.saha/Rahul/micro-services/auth-service/build/libs)
+2024-07-11T23:53:18.051+05:30  INFO 121379 --- [auth-service] [           main] c.r.auth_service.AuthServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-07-11T23:53:19.323+05:30  INFO 121379 --- [auth-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-07-11T23:53:19.337+05:30  INFO 121379 --- [auth-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-11T23:53:19.338+05:30  INFO 121379 --- [auth-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-11T23:53:19.385+05:30  INFO 121379 --- [auth-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-11T23:53:19.387+05:30  INFO 121379 --- [auth-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1195 ms
+2024-07-11T23:53:19.727+05:30  INFO 121379 --- [auth-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
+2024-07-11T23:53:19.747+05:30  INFO 121379 --- [auth-service] [           main] c.r.auth_service.AuthServiceApplication  : Started AuthServiceApplication in 2.269 seconds (process running for 2.755)
+2024-07-11T23:53:35.472+05:30  INFO 121379 --- [auth-service] [nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-11T23:53:35.473+05:30  INFO 121379 --- [auth-service] [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-11T23:53:35.475+05:30  INFO 121379 --- [auth-service] [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
