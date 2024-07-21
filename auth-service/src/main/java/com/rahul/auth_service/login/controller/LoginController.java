@@ -8,15 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("auth-service/")
+@RequestMapping("auth/")
 public class LoginController {
-
-    @Autowired
-    private IUserService userService;
 
     @PostMapping("login")
     public ResponseEntity<String> login() {
-        return  userService.status();
+        return new ResponseEntity<>("Login successful", org.springframework.http.HttpStatus.OK);
 
     }
 

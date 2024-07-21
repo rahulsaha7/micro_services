@@ -1,7 +1,7 @@
 CURR_DIR=$(pwd)
 LOG_DIR=${CURR_DIR}/../data/logs
 SPRING_BOOT_APP="auth-service.jar"
-BIN_DIR=${CURR_DIR}/../build/libs
+BIN_DIR=${CURR_DIR}/../dist/target/bin
 
 cd $BIN_DIR
 mkdir -p ${LOG_DIR}
@@ -9,7 +9,7 @@ mkdir -p ${LOG_DIR}
 start() {
     PORT=${1}
     echo "Starting Spring Boot application..."
-    START="nohup java"
+    START="nohup java -Dspring.profiles.active=local"
     DEBUG="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=${PORT}" 
     if [[ -z "${PORT}" ]]
     then
@@ -39,7 +39,7 @@ stop() {
 case "$1" in
     debug)
     	stop
-        start 8083
+        start 8082
         ;;
     stop)
         stop

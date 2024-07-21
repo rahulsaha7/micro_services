@@ -1,1 +1,1 @@
-(cd .. && ./gradlew build -x test -x check)
+(cd .. && ./gradlew clean build -x test -x check)
