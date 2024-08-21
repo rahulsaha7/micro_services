@@ -1,0 +1,148 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.2.7'
+	id 'io.spring.dependency-management' version '1.1.5'
+}
+
+group = 'com.rahul'
+version = ''
+
+
+jar{
+	archiveClassifier=''
+}
+
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+	all {
+		exclude group: 'ch.qos.logback', module: 'logback-classic'
+		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+		exclude group: 'org.springframework.boot', module: 'spring-boot-starter'
+		exclude group: 'commons-logging', module: 'commons-logging'
+	}
+}
+
+ext {
+	ver = [
+			log4j: '2.19.0'
+	]
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	implementation 'org.apache.commons:commons-lang3:3.15.0'
+//	implementation 'org.postgresql:postgresql:42.7.2'
+	implementation 'org.hibernate.orm:hibernate-core:7.0.0.Alpha3'
+	implementation 'org.springframework.kafka:spring-kafka:3.2.2'
+//	implementation 'io.jsonwebtoken:jjwt-api:0.12.6'
+//	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.6'
+//	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.6'
+//	implementation 'com.nimbusds:nimbus-jose-jwt:9.40'
+	// https://mvnrepository.com/artifact/com.sun.mail/jakarta.mail
+	implementation 'com.sun.mail:jakarta.mail:2.0.1'
+
+
+
+	implementation "org.apache.logging.log4j:log4j-api:2.19.0"
+	implementation "org.apache.logging.log4j:log4j-core:2.19.0"
+	implementation "org.springframework.boot:spring-boot-starter-log4j2"
+//	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	implementation 'javax.annotation:javax.annotation-api:1.3.2'
+	implementation 'org.hibernate.validator:hibernate-validator:8.0.1.Final'
+
+	compileOnly 'org.projectlombok:lombok:1.18.26'
+	annotationProcessor 'org.projectlombok:lombok:1.18.26'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.26'
+	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:4.1.3'
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:4.1.3'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:3.3.2'
+
+
+}
+
+def outputRoot = "${rootDir}/dist"
+def targetDir = "${outputRoot}/target"
+
+task deleteOutputTarget(type: Delete) {
+	doFirst {
+		println("#### DELETE DIR - ${targetDir}")
+		delete "${targetDir}/bin"
+	}
+}
+
+task copyJars(type: Copy) { task ->
+	// This configures the copy and execute only on any changes
+	dependsOn deleteOutputTarget
+	dependsOn bootJar
+	println("#### COPY JARS - ${task.project.name} to ${targetDir}/bin")
+	from jar
+	into project.file("${targetDir}/bin")
+
+	doFirst {
+		// These print statements are printed only when task is executed
+		println("#### COPY JARS - ${task.project.name} to ${targetDir}/bin")
+	}
+}
+
+task copyDeps(type: Copy) { task ->
+	// This configures the copy and execute only on any changes
+	from configurations.runtimeClasspath
+	into project.file("${targetDir}/lib")
+
+	doFirst {
+		// These print statements are printed only when task is executed
+		println("#### COPY LIBS - ${task.project.name} to ${targetDir}/lib")
+	}
+}
+
+build.dependsOn(copyJars, copyDeps)
+
+task copyScriptsAndConfig(type: Copy) {
+	// This configures the copy and execute only on any changes
+	from "${outputRoot}"
+	into "${targetDir}"
+	exclude("target/**")
+	doFirst {
+		// These print statements are printed only when task is executed
+		println("#### COPYING SCRIPTS AND CONFIG")
+		println("FROM - ${outputRoot}")
+		println("TO - ${targetDir}")
+		println("####")
+	}
+}
+
+build.dependsOn(copyScriptsAndConfig)
+
+def mainClass = "com.rahul.email_service.EmailServiceApplication"
+
+def classpath = ' ../conf/configs/ ../conf/configs/commons/lang/ '
+// This appends the dependencies to manifest classpath
+classpath += configurations.runtimeClasspath.collect { '../lib/' + it.getName() }.join(' ')
+
+jar {
+	manifest {
+		attributes(
+				"Main-Class": mainClass,
+				"Class-Path": classpath  // Class-Path set to include lib directory
+		)
+	}
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

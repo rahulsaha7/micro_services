@@ -1,0 +1,441 @@
+Listening for transport dt_socket at address: 8084
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.7)
+
+2024-08-19T23:05:25.972+05:30  INFO 217128 --- [           main] c.r.u.UserServiceApplication             : Starting UserServiceApplication using Java 17.0.12 with PID 217128 (/home/rahul.saha/Rahul/micro-services/user-service/dist/target/bin/user-service.jar started by rahul.saha in /home/rahul.saha/Rahul/micro-services/user-service/dist/target/bin)
+2024-08-19T23:05:25.981+05:30  INFO 217128 --- [           main] c.r.u.UserServiceApplication             : The following 1 profile is active: "local"
+2024-08-19T23:05:27.550+05:30  INFO 217128 --- [           main] o.s.c.c.s.GenericScope                   : BeanFactory id=e6bd56de-824f-32a1-b303-aaac483d8695
+2024-08-19T23:05:27.949+05:30  WARN 217128 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-19T23:05:27.954+05:30  WARN 217128 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-08-19T23:05:28.261+05:30  INFO 217128 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8083 (http)
+2024-08-19T23:05:28.277+05:30  INFO 217128 --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2024-08-19T23:05:28.277+05:30  INFO 217128 --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-19T23:05:28.321+05:30  INFO 217128 --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2024-08-19T23:05:28.323+05:30  INFO 217128 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2283 ms
+2024-08-19T23:05:28.653+05:30  INFO 217128 --- [           main] o.s.c.o.FeignClientFactoryBean           : For 'AUTH-SERVICE' URL not provided. Will try picking an instance via load-balancing.
+2024-08-19T23:05:29.349+05:30  INFO 217128 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-08-19T23:05:29.393+05:30  WARN 217128 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-08-19T23:05:29.472+05:30  INFO 217128 --- [           main] o.s.c.n.e.InstanceInfoFactory            : Setting initial instance status as: STARTING
+2024-08-19T23:05:29.509+05:30  INFO 217128 --- [           main] c.n.d.DiscoveryClient                    : Initializing Eureka in region us-east-1
+2024-08-19T23:05:29.515+05:30  INFO 217128 --- [           main] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-19T23:05:29.529+05:30  INFO 217128 --- [           main] c.n.d.DiscoveryClient                    : Disable delta property : false
+2024-08-19T23:05:29.529+05:30  INFO 217128 --- [           main] c.n.d.DiscoveryClient                    : Single vip registry refresh property : null
+2024-08-19T23:05:29.530+05:30  INFO 217128 --- [           main] c.n.d.DiscoveryClient                    : Force full registry fetch : false
+2024-08-19T23:05:29.530+05:30  INFO 217128 --- [           main] c.n.d.DiscoveryClient                    : Application is null : false
+2024-08-19T23:05:29.530+05:30  INFO 217128 --- [           main] c.n.d.DiscoveryClient                    : Registered Applications size is zero : true
+2024-08-19T23:05:29.530+05:30  INFO 217128 --- [           main] c.n.d.DiscoveryClient                    : Application version is -1: true
+2024-08-19T23:05:29.530+05:30  INFO 217128 --- [           main] c.n.d.DiscoveryClient                    : Getting all instance registry info from the eureka server
+2024-08-19T23:05:29.990+05:30  INFO 217128 --- [           main] c.n.d.DiscoveryClient                    : The response status is 200
+2024-08-19T23:05:29.993+05:30  INFO 217128 --- [           main] c.n.d.DiscoveryClient                    : Starting heartbeat executor: renew interval is: 30
+2024-08-19T23:05:29.997+05:30  INFO 217128 --- [           main] c.n.d.InstanceInfoReplicator             : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-08-19T23:05:30.000+05:30  INFO 217128 --- [           main] c.n.d.DiscoveryClient                    : Discovery Client initialized at timestamp 1724088929999 with initial instances count: 8
+2024-08-19T23:05:30.007+05:30  INFO 217128 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USER-SERVICE with eureka with status UP
+2024-08-19T23:05:30.008+05:30  INFO 217128 --- [           main] c.n.d.DiscoveryClient                    : Saw local status change event StatusChangeEvent [timestamp=1724088930008, current=UP, previous=STARTING]
+2024-08-19T23:05:30.010+05:30  INFO 217128 --- [foReplicator-%d] c.n.d.DiscoveryClient                    : DiscoveryClient_USER-SERVICE/192.168.0.100:user-service:8083: registering service...
+2024-08-19T23:05:30.031+05:30  INFO 217128 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8083 (http) with context path ''
+2024-08-19T23:05:30.033+05:30  INFO 217128 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
+2024-08-19T23:05:30.060+05:30  INFO 217128 --- [foReplicator-%d] c.n.d.DiscoveryClient                    : DiscoveryClient_USER-SERVICE/192.168.0.100:user-service:8083 - registration status: 204
+2024-08-19T23:05:31.036+05:30  INFO 217128 --- [           main] o.s.c.c.u.InetUtils                      : Cannot determine local hostname
+2024-08-19T23:05:31.073+05:30  INFO 217128 --- [           main] o.a.k.c.c.ConsumerConfig                 : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-auth-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = auth-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2024-08-19T23:05:31.158+05:30  INFO 217128 --- [           main] o.a.k.c.u.AppInfoParser                  : Kafka version: 3.6.2
+2024-08-19T23:05:31.158+05:30  INFO 217128 --- [           main] o.a.k.c.u.AppInfoParser                  : Kafka commitId: c4deed513057c94e
+2024-08-19T23:05:31.158+05:30  INFO 217128 --- [           main] o.a.k.c.u.AppInfoParser                  : Kafka startTimeMs: 1724088931156
+2024-08-19T23:05:31.161+05:30  INFO 217128 --- [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Subscribed to topic(s): USERS
+2024-08-19T23:05:31.181+05:30  INFO 217128 --- [           main] c.r.u.UserServiceApplication             : Started UserServiceApplication in 5.773 seconds (process running for 6.466)
+2024-08-19T23:05:31.466+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.Metadata                         : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Cluster ID: ofAnkE_rRziWUk9KJWfLhw
+2024-08-19T23:05:31.468+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Discovered group coordinator localhost:9092 (id: 2147482646 rack: null)
+2024-08-19T23:05:31.472+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] (Re-)joining group
+2024-08-19T23:05:31.499+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Request joining group due to: need to re-join with the given member-id: consumer-auth-group-1-07775bc8-b3e3-444b-8286-773533d32afa
+2024-08-19T23:05:31.499+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2024-08-19T23:05:31.500+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] (Re-)joining group
+2024-08-19T23:06:05.831+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Successfully joined group with generation Generation{generationId=30, memberId='consumer-auth-group-1-07775bc8-b3e3-444b-8286-773533d32afa', protocol='range'}
+2024-08-19T23:06:05.840+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Finished assignment for group at generation 30: {consumer-auth-group-1-07775bc8-b3e3-444b-8286-773533d32afa=Assignment(partitions=[USERS-0])}
+2024-08-19T23:06:05.847+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Successfully synced group in generation Generation{generationId=30, memberId='consumer-auth-group-1-07775bc8-b3e3-444b-8286-773533d32afa', protocol='range'}
+2024-08-19T23:06:05.848+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Notifying assignor about the new Assignment(partitions=[USERS-0])
+2024-08-19T23:06:05.854+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Adding newly assigned partitions: USERS-0
+2024-08-19T23:06:05.865+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Setting offset for partition USERS-0 to the committed offset FetchPosition{offset=5, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1001 rack: null)], epoch=0}}
+2024-08-19T23:06:05.867+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : auth-group: partitions assigned: [USERS-0]
+2024-08-19T23:10:29.533+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T10:41:17.980+05:30  INFO 217128 --- [ad | auth-group] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Group coordinator localhost:9092 (id: 2147482646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-20T10:41:17.981+05:30  INFO 217128 --- [ad | auth-group] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147482646 rack: null)
+2024-08-20T10:41:17.982+05:30  INFO 217128 --- [ad | auth-group] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Client requested disconnect from node 2147482646
+2024-08-20T10:41:17.992+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Discovered group coordinator localhost:9092 (id: 2147482646 rack: null)
+2024-08-20T10:41:17.994+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Group coordinator localhost:9092 (id: 2147482646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-20T10:41:17.994+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147482646 rack: null)
+2024-08-20T10:41:18.096+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Discovered group coordinator localhost:9092 (id: 2147482646 rack: null)
+2024-08-20T10:43:26.446+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Node -1 disconnected.
+2024-08-20T10:44:24.183+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T10:49:24.187+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T10:54:24.187+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T10:59:24.188+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T11:04:24.189+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T11:09:24.190+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T11:14:24.191+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T11:19:24.192+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T11:24:24.193+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T11:29:24.198+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T11:34:24.210+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T11:39:24.211+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T11:44:24.212+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T11:49:24.213+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T11:54:24.214+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T11:59:24.214+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T12:04:24.221+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T12:09:24.223+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T12:14:24.224+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T12:19:24.225+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T12:24:24.235+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T12:29:24.236+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T12:34:24.237+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T12:39:24.238+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T12:44:24.239+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T12:49:24.240+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T12:54:24.241+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T12:59:24.243+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T13:04:24.245+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T13:09:24.247+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T13:14:24.248+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T13:19:24.249+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T13:24:24.249+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T13:29:24.250+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T13:34:24.260+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T13:39:24.270+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T13:44:24.271+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T13:49:24.274+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T13:54:24.275+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T13:59:24.276+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T14:04:24.287+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T14:09:24.288+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T14:14:24.289+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T14:19:24.292+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T14:24:24.293+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T14:29:24.294+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T14:34:24.294+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T14:39:24.295+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T14:44:24.296+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T14:49:24.298+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T14:54:24.299+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T14:59:24.300+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T15:04:24.301+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T15:09:24.302+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T15:14:24.303+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T15:19:24.304+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T15:24:24.314+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T15:29:24.315+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T15:34:24.315+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T15:39:24.316+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T15:44:24.317+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T15:49:24.318+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T15:54:24.318+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T15:59:24.319+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T16:04:24.320+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T16:09:24.321+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T16:14:24.321+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T16:19:24.322+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T16:24:24.323+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T16:29:24.324+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T16:34:24.325+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T16:39:24.326+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T16:44:24.327+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T16:49:24.328+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T16:54:24.328+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T16:59:24.329+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T17:04:24.330+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T17:09:24.330+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T17:14:24.331+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T17:19:24.332+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T17:24:24.333+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T17:29:24.333+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T17:34:24.334+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T17:39:24.335+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T17:44:24.336+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T17:49:24.337+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T17:54:24.338+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T17:59:24.339+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T18:04:24.340+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T18:09:24.342+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T18:14:24.352+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T18:19:24.353+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T18:24:24.355+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T18:29:24.365+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T18:34:24.366+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T18:39:24.376+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T18:44:24.387+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T18:49:24.388+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T18:54:24.389+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T18:59:24.390+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T19:04:24.391+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T19:09:24.392+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T19:14:24.393+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T19:19:24.393+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T19:24:24.394+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T19:29:24.395+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T19:34:24.395+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T19:39:24.396+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T19:44:24.400+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T19:49:24.410+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T19:54:24.420+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T19:59:24.420+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T20:04:24.421+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T20:09:24.422+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T20:14:24.422+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T20:19:24.423+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T20:24:24.424+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T20:29:24.425+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T20:34:24.426+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T20:39:24.427+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T20:44:24.428+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T20:49:24.428+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T20:54:24.430+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T20:59:24.431+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T21:04:24.432+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T21:09:24.435+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T21:14:24.435+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T21:19:24.436+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T21:24:24.437+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T21:29:24.438+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T21:34:24.448+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T21:39:24.459+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T21:44:24.459+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T21:49:24.460+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T21:54:24.461+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T21:59:24.470+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T22:04:24.471+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T22:09:24.472+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T22:14:24.473+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T22:19:24.474+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T22:24:24.475+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T22:29:24.476+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T22:34:24.476+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T22:39:24.477+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T22:44:24.478+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T22:49:24.488+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T22:54:24.489+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T22:59:24.490+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T23:04:24.491+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T23:09:24.492+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T23:14:24.493+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T23:19:24.494+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T23:24:24.494+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T23:29:24.495+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T23:34:24.505+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T23:39:24.506+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T23:44:24.516+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T23:49:24.518+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-20T23:54:24.519+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T10:43:28.948+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T10:43:29.080+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Disconnecting from node 1001 due to request timeout.
+2024-08-21T10:43:29.096+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Cancelled in-flight FETCH request with correlation id 112411 due to node 1001 being disconnected (elapsed time since creation: 38645448ms, elapsed time since send: 38645448ms, request timeout: 30000ms)
+2024-08-21T10:43:29.511+05:30  INFO 217128 --- [ad | auth-group] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Group coordinator localhost:9092 (id: 2147482646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-21T10:43:29.511+05:30  INFO 217128 --- [ad | auth-group] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147482646 rack: null)
+2024-08-21T10:43:29.512+05:30  INFO 217128 --- [ad | auth-group] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Client requested disconnect from node 2147482646
+2024-08-21T10:43:29.511+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.FetchSessionHandler              : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Error sending fetch request (sessionId=714411162, epoch=96153) to node 1001:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2024-08-21T10:43:29.640+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Discovered group coordinator localhost:9092 (id: 2147482646 rack: null)
+2024-08-21T10:43:29.641+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Discovered group coordinator localhost:9092 (id: 2147482646 rack: null)
+2024-08-21T10:48:28.979+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T10:53:28.980+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T10:58:28.980+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T11:03:28.981+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T11:08:28.982+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T11:13:28.982+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T11:18:28.369+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T11:23:28.369+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T11:28:28.370+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T11:33:28.371+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T11:38:28.371+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T11:43:28.372+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T11:48:28.373+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T11:53:28.374+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T11:58:28.375+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T12:03:28.376+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T12:08:28.377+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T12:13:28.378+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T12:18:28.379+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T12:23:28.379+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T12:28:28.381+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T12:33:28.381+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T12:38:28.383+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T12:43:28.383+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T12:48:28.384+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T12:53:28.385+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T12:58:28.396+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T13:03:28.406+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T13:08:28.407+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T13:13:28.407+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T13:18:28.408+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T13:23:28.409+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T13:28:28.411+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T13:33:28.412+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T13:38:28.413+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T13:43:28.414+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T13:48:28.415+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T13:53:28.416+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T13:58:28.417+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T14:03:28.417+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T14:08:28.418+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T14:13:28.418+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T14:18:28.420+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T14:23:28.420+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T14:28:28.421+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T14:33:28.422+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T14:38:28.422+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T14:43:28.424+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T14:48:28.424+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T14:53:28.425+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T14:58:28.426+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T15:03:28.427+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T15:08:28.431+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T15:13:28.431+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T15:18:28.432+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T15:23:28.433+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T15:28:28.434+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T15:33:28.435+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T15:38:28.437+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T15:43:28.439+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T15:48:28.443+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T15:53:28.454+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T15:58:28.460+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T16:03:28.461+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T16:08:28.461+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T16:13:28.463+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T16:18:28.464+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T16:23:28.465+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T16:28:28.467+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T16:33:28.468+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T16:38:28.469+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T16:43:28.470+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T16:48:28.472+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T16:53:28.473+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T16:58:28.475+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T17:03:28.475+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T17:08:28.476+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T17:13:28.477+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T17:18:28.478+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T17:23:28.479+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T17:28:28.480+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T17:33:28.481+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T17:38:28.482+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T17:43:28.483+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T17:48:28.483+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T17:53:28.484+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T17:58:28.484+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T18:03:28.485+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T18:08:28.486+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T18:13:28.486+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T18:18:28.487+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T18:23:28.487+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T20:13:37.012+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Disconnecting from node 1001 due to request timeout.
+2024-08-21T20:13:37.023+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Cancelled in-flight FETCH request with correlation id 177220 due to node 1001 being disconnected (elapsed time since creation: 6379977ms, elapsed time since send: 6379977ms, request timeout: 30000ms)
+2024-08-21T20:13:37.028+05:30  INFO 217128 --- [ad | auth-group] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Group coordinator localhost:9092 (id: 2147482646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-21T20:13:37.029+05:30  INFO 217128 --- [ad | auth-group] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147482646 rack: null)
+2024-08-21T20:13:37.032+05:30  INFO 217128 --- [ad | auth-group] o.a.k.c.NetworkClient                    : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Client requested disconnect from node 2147482646
+2024-08-21T20:13:37.028+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.FetchSessionHandler              : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Error sending fetch request (sessionId=966187252, epoch=55437) to node 1001:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2024-08-21T20:13:37.122+05:30  INFO 217128 --- [ntainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator          : [Consumer clientId=consumer-auth-group-1, groupId=auth-group] Discovered group coordinator localhost:9092 (id: 2147482646 rack: null)
+2024-08-21T20:14:47.119+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T20:19:47.124+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2024-08-21T20:24:47.134+05:30  INFO 217128 --- [rap-executor-%d] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration

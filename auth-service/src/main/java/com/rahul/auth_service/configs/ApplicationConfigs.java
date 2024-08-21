@@ -1,6 +1,7 @@
 package com.rahul.auth_service.configs;
 
 import java.io.IOException;
+import java.util.Properties;
 import javax.sql.DataSource;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.ArrayUtils;
@@ -9,6 +10,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import org.springframework.core.env.ConfigurableEnvironment;
+import org.springframework.core.env.PropertiesPropertySource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -22,11 +25,14 @@ public class ApplicationConfigs {
 
     @Bean
     public DataSource dataSource() {
+        log.info(log.getClass().getName());
+        log.info("Creating datasource");
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setUrl(dbConfigs.getDatabaseUrl());
         dataSource.setUsername(dbConfigs.getDatabaseUsername());
         dataSource.setPassword(dbConfigs.getDatabasePassword());
         dataSource.setDriverClassName(dbConfigs.getDatabaseDriver());
+        System.out.println("Datasource created , url : {} " + dbConfigs.getDatabaseUrl());
         return dataSource;
     }
 
@@ -34,6 +40,8 @@ public class ApplicationConfigs {
     @Bean
     public static PropertySourcesPlaceholderConfigurer placeHolderConfigurer(ApplicationContext applicationContext)
         throws IOException {
+
+        ConfigurableEnvironment environment = (ConfigurableEnvironment) applicationContext.getEnvironment();
 
         String[] activeProfiles = applicationContext.getEnvironment().getActiveProfiles();
         if (activeProfiles.length != 1) {
@@ -45,6 +53,15 @@ public class ApplicationConfigs {
             new PathMatchingResourcePatternResolver().getResources(
                 "classpath:" + activeProfiles[0] + "/**/*.properties"));
         propertyConfigurator.setLocations(projectResources);
+        Properties properties = new Properties();
+        for (Resource resource : projectResources) {
+            log.info("Loading properties from {}", resource.getFilename());
+            properties.load(resource.getInputStream());
+        }
+
+        environment.getPropertySources().addFirst(new PropertiesPropertySource("dynamicProperties", properties));
+
+
         return propertyConfigurator;
     }
 
